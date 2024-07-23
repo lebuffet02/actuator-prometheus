@@ -1,0 +1,21 @@
+management:
+  endpoints:
+    web:
+      base-path: "/management"
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      group:
+        custom:
+          show-components: always
+          show-details: always
+    info:
+      enabled: true
+      cache:
+        time-to-live: "10s"
+    shutdown:
+      enabled: true
+  info:
+    env:
+      enabled: true
